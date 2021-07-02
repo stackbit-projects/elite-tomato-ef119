@@ -1,0 +1,70 @@
+stackbitVersion: ~0.3.0
+ssgName: jekyll
+publishDir: _site
+dataDir: _data
+pagesDir: ''
+models:
+  post:
+    type: page
+    label: Post
+    folder: _posts
+    match: '*'
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: author
+        label: Author
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: icon
+        label: Icon
+      - type: string
+        name: icon-style
+        label: Icon Style
+  page_1:
+    type: page
+    label: Page 1
+    match:
+      - _sections/welcome-to-jekyll.md
+      - index.md
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: icon
+        label: Icon
+      - type: number
+        name: order
+        label: Order
+        subtype: int
+      - type: string
+        name: layout
+        label: Layout
+  page_2:
+    type: page
+    label: Page 2
+    match: '*'
+    exclude:
+      - index.md
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: subtitle
+        label: Subtitle
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: icon
+        label: Icon
+      - type: number
+        name: order
+        label: Order
+        subtype: int
